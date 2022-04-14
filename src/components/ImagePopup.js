@@ -13,7 +13,8 @@ function ImagePopup({ card, onClose }) {
                 <figure className="popup__image">
                     <img 
                     className="popup__photo"
-                    src={card.link} />
+                    src={card.link}
+                    alt={card.name} />
                     <figcaption className="popup__caption">{card.name}</figcaption>
                 </figure>
             </div>
@@ -22,6 +23,3 @@ function ImagePopup({ card, onClose }) {
 }
 
 export default ImagePopup;
-
-
-// вот так? ${card.link && 'popup_opened'} ?

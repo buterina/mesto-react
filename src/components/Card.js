@@ -10,7 +10,8 @@ function Card({ card, onCardClick }) {
         <li className="card">
             <img
                 className="card__photo"
-                src={card.link} 
+                src={card.link}
+                alt={card.name} 
                 onClick={handleClick}/>
             <button
                 className="card__delete-button"

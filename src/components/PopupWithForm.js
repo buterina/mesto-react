@@ -10,7 +10,7 @@ function PopupWithForm({ name, title, children, buttonText, isOpen, onClose }) {
                 </button>
                 <h2 className="popup__title">{title}</h2>
                 <form
-                    className="popup__form" // popup__form_type_edit-profile?! 
+                    className="popup__form" 
                     name={name}
                     noValidate>
 
