@@ -2,6 +2,7 @@ class Api {
   constructor({ baseUrl, headers }) {
     this._headers = headers;
     this._baseUrl = baseUrl
+
   }
 
   _checkResponse(res) {
@@ -67,21 +68,14 @@ class Api {
       .then(res => this._checkResponse(res))
   }
 
-  addLike(id) {
+  changeLikeCardStatus(id, isLiked) {
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-      method: 'PUT',
+      method: isLiked ? 'DELETE' : 'PUT',
       headers: this._headers,
     })
-      .then(res => this._checkResponse(res))
+    .then(res => this._checkResponse(res))
   }
-
-  deleteLike(id) {
-    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-      method: 'DELETE',
-      headers: this._headers,
-    })
-      .then(res => this._checkResponse(res))
-  }
+  
 }
 
 export const api = new Api({

@@ -11,3 +11,7 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
+
+.card__like-button_filled:hover {
+  cursor: pointer;
+}
