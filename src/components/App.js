@@ -83,7 +83,7 @@ function App() {
     setIsAddPlacePopupOpen(false);
     setIsEditAvatarPopupOpen(false);
     setIsConfirmationPopupOpen(false);
-    setSelectedCard(false);
+    setSelectedCard({ name: '', link: '' });
   }
 
   const handleCardClick = (card) => {

@@ -11,7 +11,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
     React.useEffect(() => {
         setName(currentUser.name);
         setDescription(currentUser.about);
-    }, [currentUser]);
+    }, [currentUser, isOpen]);
 
     const handleNameChange = (e) => {
         setName(e.target.value)
@@ -35,48 +35,46 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
             onClose={onClose}
             buttonText="Сохранить"
             title="Редактировать профиль"
-            onSubmit={handleSubmit}
-            children={
-                <>
-                    <label
-                        className="popup__field">
-                        <input
-                            className="popup__input popup__input_type_name"
-                            value={name || ''}
-                            onChange={handleNameChange}
-                            id="name-input"
-                            type="text"
-                            name="name"
-                            placeholder="Ваше имя"
-                            minLength="2"
-                            maxLength="40"
-                            autoComplete="off"
+            onSubmit={handleSubmit}>
+            <>
+                <label
+                    className="popup__field">
+                    <input
+                        className="popup__input popup__input_type_name"
+                        value={name || ''}
+                        onChange={handleNameChange}
+                        id="name-input"
+                        type="text"
+                        name="name"
+                        placeholder="Ваше имя"
+                        minLength="2"
+                        maxLength="40"
+                        autoComplete="off"
 
-                            required />
-                        <span
-                            className="popup__input-error name-input-error"></span>
-                    </label>
+                        required />
+                    <span
+                        className="popup__input-error name-input-error"></span>
+                </label>
 
-                    <label
-                        className="popup__field">
-                        <input
-                            value={description || ''}
-                            onChange={handleDescriptionChange}
-                            className="popup__input popup__input_type_about"
-                            id="bio-input"
-                            type="text"
-                            name="about"
-                            placeholder="Ваш род занятий"
-                            minLength="2"
-                            maxLength="200"
-                            autoComplete="off"
-                            required />
-                        <span
-                            className="popup__input-error bio-input-error"></span>
-                    </label>
-                </>
-            }
-        />)
+                <label
+                    className="popup__field">
+                    <input
+                        value={description || ''}
+                        onChange={handleDescriptionChange}
+                        className="popup__input popup__input_type_about"
+                        id="bio-input"
+                        type="text"
+                        name="about"
+                        placeholder="Ваш род занятий"
+                        minLength="2"
+                        maxLength="200"
+                        autoComplete="off"
+                        required />
+                    <span
+                        className="popup__input-error bio-input-error"></span>
+                </label>
+            </>
+        </PopupWithForm>)
 }
 
 export default EditProfilePopup;

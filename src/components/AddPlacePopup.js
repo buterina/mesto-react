@@ -1,6 +1,5 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm";
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
 
@@ -23,6 +22,11 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         })
     }
 
+    React.useEffect(() => {
+        setPlace('');
+        setLink('');
+    }, [isOpen])
+
     return (
         <PopupWithForm
             name="add-card"
@@ -30,44 +34,43 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
             onClose={onClose}
             buttonText="Сохранить"
             title="Новое место"
-            onSubmit={handleSubmit}
-            children={
-                <>
-                    <label
-                        className="popup__field">
-                        <input
-                            className="popup__input popup__input_type_card-name"
-                            onChange={handlePlaceChange}
-                            value={place || ''}
-                            type="text"
-                            name="place"
-                            id="place-input"
-                            placeholder="Название"
-                            autoComplete="off"
-                            minLength="2"
-                            maxLength="30"
-                            required />
-                        <span
-                            className="popup__input-error place-input-error"></span>
-                    </label>
+            onSubmit={handleSubmit}>
+            <>
+                <label
+                    className="popup__field">
+                    <input
+                        className="popup__input popup__input_type_card-name"
+                        onChange={handlePlaceChange}
+                        value={place || ''}
+                        type="text"
+                        name="place"
+                        id="place-input"
+                        placeholder="Название"
+                        autoComplete="off"
+                        minLength="2"
+                        maxLength="30"
+                        required />
+                    <span
+                        className="popup__input-error place-input-error"></span>
+                </label>
 
-                    <label
-                        className="popup__field">
-                        <input
-                            className="popup__input popup__input_type_card-link"
-                            onChange={handleLinkChange}
-                            value={link || ''}
-                            type="url"
-                            name="link"
-                            id="link-input"
-                            placeholder="Ссылка на картинку"
-                            autoComplete="off"
-                            required />
-                        <span
-                            className="popup__input-error link-input-error"></span>
-                    </label>
-                </>
-            } />
+                <label
+                    className="popup__field">
+                    <input
+                        className="popup__input popup__input_type_card-link"
+                        onChange={handleLinkChange}
+                        value={link || ''}
+                        type="url"
+                        name="link"
+                        id="link-input"
+                        placeholder="Ссылка на картинку"
+                        autoComplete="off"
+                        required />
+                    <span
+                        className="popup__input-error link-input-error"></span>
+                </label>
+            </>
+        </PopupWithForm>
     )
 }
 
