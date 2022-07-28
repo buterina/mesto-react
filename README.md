@@ -1,24 +1,19 @@
-Место (React): проектная работа для Яндекс Практимума.
 
-В этом проекте я использую навыки, приобретенные во время обучения на Яндекс Практикуме.
-
-Использованные технологии:
-
--HTML5 -CSS -Javascript - React
-
-# Places: a project for Practicum web development course
+# Places: a project for Practicum web development course (React.js version)
 
 ## Description:
 
-"Places" is an interactive website featuring user-generated posts. Users can add, like, and delete posts.
+"Places" is an interactive website featuring user-generated posts. Users can add, like, and delete posts. This version has been rebuilt using React.js
 
 ## Features:
+
+-users can add and delete posts;
+
+-users can edit their profiles;
 
 -users can like posts;
 
 -all data (profile, avatar, likes, etc.) is stored on the server;
-
--client-side form validation
 
 
 ## Tech:
@@ -28,6 +23,8 @@
 -CSS (flexbox, grid, animations, adaptive layout);
 
 -Javascript (async, OOP, DOM API, Fetch API);
+
+-React.js
 
 -BEM (Block, Element, Modifier) methodology;
 
