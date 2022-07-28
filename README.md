@@ -37,13 +37,9 @@ https://buterina.github.io/mesto-react
 ## Clone:
 
 ```
-git clone https://github.com/buterina/mesto.git
+git clone https://github.com/buterina/mesto-react.git
 
-cd mesto
+npm install
 
-npm i webpack --save-dev
-
-npm run build
-
-npm run dev
+npm run
 ```
