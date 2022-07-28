@@ -32,7 +32,7 @@
 
 ## Demo:
 
-https://places-buterina.netlify.app
+https://buterina.github.io/mesto-react
 
 ## Clone:
 
