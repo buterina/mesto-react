@@ -169,8 +169,8 @@ function App() {
 
           name="delete-confirm"
           isOpen={isConfirmationPopupOpen}
-          title="Вы уверены?"
-          buttonText="Да"
+          title="Are you sure?"
+          buttonText="Yes"
           onClose={closeAllPopups}
           onSubmit={handleCardDelete}
         />
