@@ -1,3 +1,5 @@
+import React from 'react';
+
 function PopupWithConfirmation({ name, title, buttonText, isOpen, onClose, onSubmit, card }) {
 
     const handleSubmit = (e) => {
@@ -7,7 +9,7 @@ function PopupWithConfirmation({ name, title, buttonText, isOpen, onClose, onSub
 
     return (
         <article
-            className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}>  
+            className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}>
             <div
                 className="popup__container">
                 <button

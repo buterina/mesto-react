@@ -1,6 +1,5 @@
 import React from "react";
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
-// import { currentUser } from './App';
 
 function Card({ card, onCardClick, onCardLike, onCardDelete }) {
 
@@ -42,7 +41,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
             <button
                 className={cardDeleteButtonClassName}
                 type="button"
-                aria-label="Удалить"
+                aria-label="Delete"
                 onClick={handleDeleteClick}>
             </button>
             <div className="card__place">
@@ -52,7 +51,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
                         className={cardLikeButtonClassName}
                         type="button"
                         onClick={handleLikeClick}
-                        aria-label="Нравится">
+                        aria-label="Like">
                     </button>
                     <span className="card__like-count">{card.likes.length}</span>
                 </div>

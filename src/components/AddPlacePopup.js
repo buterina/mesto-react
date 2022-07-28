@@ -32,8 +32,8 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
             name="add-card"
             isOpen={isOpen}
             onClose={onClose}
-            buttonText="Сохранить"
-            title="Новое место"
+            buttonText="Save"
+            title="New place"
             onSubmit={handleSubmit}>
             <>
                 <label
@@ -45,7 +45,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
                         type="text"
                         name="place"
                         id="place-input"
-                        placeholder="Название"
+                        placeholder="Place"
                         autoComplete="off"
                         minLength="2"
                         maxLength="30"
@@ -63,7 +63,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
                         type="url"
                         name="link"
                         id="link-input"
-                        placeholder="Ссылка на картинку"
+                        placeholder="Image link"
                         autoComplete="off"
                         required />
                     <span

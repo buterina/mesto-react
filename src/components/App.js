@@ -41,7 +41,7 @@ function App() {
 
   const handleCardLike = (card) => {
     const isLiked = card.likes.some(i => i._id === currentUser._id);
-    
+
 
     api.changeLikeCardStatus(card._id, isLiked)
       .then((newCard) => {
@@ -56,7 +56,7 @@ function App() {
 
     api.deleteCard(cardToBeDeleted._id)
       .then(() => {
-        setCards((state) => state.filter((c) => c._id !== cardToBeDeleted ._id));
+        setCards((state) => state.filter((c) => c._id !== cardToBeDeleted._id));
         closeAllPopups();
       })
       .catch((err) => {

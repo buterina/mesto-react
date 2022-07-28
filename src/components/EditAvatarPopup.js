@@ -19,8 +19,8 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
             name="edit-avatar"
             isOpen={isOpen}
             onClose={onClose}
-            buttonText="Сохранить"
-            title="Обновить аватар"
+            buttonText="Save"
+            title="Update avatar"
             onSubmit={handleSubmit}>
             <label
                 className="popup__field">
@@ -28,7 +28,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
                     className="popup__input popup__input_type_avatar"
                     type="url" name="avatar"
                     id="avatar-input"
-                    placeholder="Ссылка на аватар"
+                    placeholder="Avatar link"
                     autoComplete="off"
                     ref={avatarRef}
                     required />

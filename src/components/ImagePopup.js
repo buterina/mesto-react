@@ -2,16 +2,16 @@ import React from "react";
 
 function ImagePopup({ card, onClose }) {
     return (
-        <article className={`popup popup_type_photo ${card.link && 'popup_opened'}`}> 
+        <article className={`popup popup_type_photo ${card.link && 'popup_opened'}`}>
             <div className="popup__container">
-                <button 
-                className="popup__close-button" 
-                type="button" 
-                aria-label="Закрыть"
+                <button
+                className="popup__close-button"
+                type="button"
+                aria-label="Close"
                 onClick={onClose}>
                     </button>
                 <figure className="popup__image">
-                    <img 
+                    <img
                     className="popup__photo"
                     src={card.link}
                     alt={card.name} />
