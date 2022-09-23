@@ -30,9 +30,6 @@
 
 -Webpack
 
-## Demo:
-
-https://buterina.github.io/mesto-react
 
 ## Clone:
 
